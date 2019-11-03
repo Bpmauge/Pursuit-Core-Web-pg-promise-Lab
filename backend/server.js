@@ -3,7 +3,7 @@ const cors = require('cors');
 
 const app = express();
 
-const port = 1000;
+const port = 1500;
 
 app.use(cors());
 
@@ -14,9 +14,10 @@ app.use(express.urlencoded({
 app.use(express.json());
 
 // Routers
-const usersRouter = require('./routes/userRouter');
-
-app.use('/users', usersRouter);
+const userRouter = require('./routes/userRouter');
+const postRouter = require('./routes/postRouter');
+app.use('/users', userRouter);
+app.use('/posts', postRouter)
 
 app.get('/', (req, res) => {
     res.send(`Welcome to my social media page`);
