@@ -18,6 +18,12 @@ CREATE TABLE posts
     poster_id INT REFERENCES users(id) ON DELETE CASCADE,
     body VARCHAR
 );
+CREATE TABLE likes
+(
+    id SERIAL PRIMARY KEY,
+    liker_id INT REFERENCES users(id) ON DELETE CASCADE,
+    post_id INT REFERENCES posts(id) ON DELETE CASCADE
+);
 
 -- Add some users
 -- INSERT INTO users
@@ -47,4 +53,5 @@ SELECT *
 FROM users;
 SELECT *
 FROM posts;
-
+SELECT *
+FROM likes;

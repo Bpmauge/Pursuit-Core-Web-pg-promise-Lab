@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,30 +8,43 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="user.js"></script>
     <title>Add & Retrieve Users</title>
-    
+
 </head>
+
 <body>
     <h2>Add New User</h2>
     <form id="addUserForm">
-        <p>First Name: <input type="text" id='firstNameInput'></p>
-        <p>Last Name: <input type="text"id='lastNameInput'></p>
-        <p>Age: <input type="number", id='ageInput'></p>
+        <p>First Name: <input type="text" id='firstNameInput' required></p>
+        <p>Last Name: <input type="text" id='lastNameInput' required></p>
+        <p>Age: <input type="number" , id='ageInput' required></p>
         <button>Submit</button>
     </form>
     <h2>All Users</h2>
     <ul id="usersList">
     </ul>
 
-    <h2>All Posts</h2>
+    <h2 id = 'postTitle'>All Posts</h2>
     <ul id="postsList">
     </ul>
 
     <h2>Add New Post</h2>
     <form id="addPostForm">
-        <p>User ID: <input type="number" id='userId'></p>
-        <p>Text Area: <input type="text"id='textInput'></p>
+        <p>User ID: <input type="number" id='userId' required></p>
+        <p>Text Area: <input type="text" id='textInput' required></p>
         <button>Submit</button>
     </form>
-    
+
+
+    <!-- <h2>Get User's Posts</h2>
+    <form id="getUserPostForm">
+        <p>User ID: <input type="number" id='userPostId'></p>
+        <button>Submit</button>
+
+        <h2>All Posts</h2>
+        <ul id="userPostList">
+        </ul> -->
+
+    </form>
 </body>
+
 </html>
